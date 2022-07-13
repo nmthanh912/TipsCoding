@@ -1,5 +1,7 @@
 ## 1. Function to check data type
 
+> Check type of data by using object prototype
+
 ```
 const checkType = value => Object.prototype.toString().call(value).slice(8, -1)
 
@@ -59,4 +61,14 @@ const getData = async get(key) => {
         return value;
     }
 }
+```
+
+## 3. Function check time
+
+```
+const checkTime = /^(?:(?:0?|1)\d|2[0-3]):(?:0?|[1-5])\d$/
+
+console.log(checkTime.test('01:14')) // true
+console.log(checkTime.test('23:59')) // true
+console.log(checkTime.test('23:60')) // false
 ```
